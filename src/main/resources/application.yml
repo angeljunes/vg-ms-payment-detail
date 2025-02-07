@@ -1,0 +1,36 @@
+server:
+  port: 8060
+
+spring:
+  application:
+    name: payment-detail
+  data:
+    mongodb:
+      uri: "mongodb+srv://admin:1234@mariaenriqueta.f47y4yu.mongodb.net/vg-ms-mariaenriqueta?retryWrites=true&w=majority"
+      vg-ms-attorney:
+        url: "https://vg-ms-attorney-production.up.railway.app/public/attorney/api/v1"  # Updated with Codespace URL
+        vg-ms-students:
+          url: "https://willing-athene-ms-gateway-student-c17a3c83.koyeb.app/public/student/api/v1"
+          vg-ms-payment:
+            url: "https://internal-daniella-josemegun-aa6c4d6b.koyeb.app/api/payments"
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.reactive.function.client: DEBUG
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /payment-detail
+    api-docs:
+      path: /attorney
+
+api:
+  version: /api/v1
