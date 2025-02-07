@@ -1,9 +1,9 @@
-package com.spring.mariaenriqueta;
+package com.inventary.enriqueta;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = EnriquetaApplication.class)
 class AngelApplicationTests {
 
 	@Test
